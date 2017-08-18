@@ -16,6 +16,7 @@
                     You need to transfer the ownership to other users before you can proceed.
                 </p>
             </div>
+            <?php include('includes/dialogs/delete/AD_user_ownership_list.php'); ?>
 
             <div class="submit-wrapper clearfix">
                 <a class="button primary" href="../demo/AD_users.php">Got it!</a>
