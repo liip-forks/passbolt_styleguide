@@ -10,6 +10,8 @@ Homepage: https://www.passbolt.com/
 Package: passbolt-style
 Architecture: all
 Depends: ${misc:Depends},
+Replaces: passbolt-api (<< 1.6.5-6-g887b553c6-1~2018011001)
+Breaks: passbolt-api (<< 1.6.5-6-g887b553c6-1~2018011001)
 Enhances: passbolt-api
 Description: Passbolt API - Password Manager for teams - Style
  It allows you to securely share and store credentials. For instance, the wifi
