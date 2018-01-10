@@ -1,5 +1,5 @@
-passbolt-styleguide (1.6.11-1~2018011000) unstable; urgency=medium
+passbolt-styleguide (1.6.11+repack0-1~2018011000) unstable; urgency=medium
 
   * Initial test-build
 
- -- Didier Raboud (Liip) <didier.raboud@liip.ch>  Wed, 03 Jan 2018 16:37:57 +0100
+ -- Didier Raboud (Liip) <didier.raboud@liip.ch>  Wed, 10 Jan 2018 11:08:55 +0100
