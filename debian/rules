@@ -2,3 +2,18 @@
 
 %:
 	dh $@
+
+styles := devel login main setup
+styles_out := $(patsubst %,build/css/%.min.css,$(styles))
+styles_in := $(patsubst %,src/less/%.less,$(styles))
+
+override_dh_clean-indep:
+	dh_clean -i
+	# These are shipped in the source archive, let's rebuild them
+	rm -f $(styles_out)
+
+override_dh_auto_build-indep: $(styles_out)
+	dh_auto_build -i
+
+build/css/%.min.css: src/less/%.less
+	lessc -x $< > $@

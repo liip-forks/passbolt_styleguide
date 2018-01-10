@@ -1,6 +1,7 @@
 Source: passbolt-styleguide
 Maintainer: Didier Raboud <odyx@debian.org>
 Build-Depends: debhelper (>= 10),
+ node-less,
 Section: php
 Priority: optional
 Standards-Version: 4.1.3
