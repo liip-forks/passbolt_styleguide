@@ -1,0 +1,4 @@
+build/css/devel.min.css 	/usr/share/php/passbolt-api/app/webroot/css/
+build/css/login.min.css 	/usr/share/php/passbolt-api/app/webroot/css/
+build/css/main.min.css  	/usr/share/php/passbolt-api/app/webroot/css/
+build/css/setup.min.css 	/usr/share/php/passbolt-api/app/webroot/css/
