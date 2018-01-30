@@ -3,7 +3,7 @@
 %:
 	dh $@
 
-styles := devel login main setup
+styles := check devel login main setup
 styles_out := $(patsubst %,build/css/%.min.css,$(styles))
 styles_in := $(patsubst %,src/less/%.less,$(styles))
 
