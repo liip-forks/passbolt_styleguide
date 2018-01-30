@@ -2,6 +2,9 @@ Source: passbolt-styleguide
 Maintainer: Didier Raboud <odyx@debian.org>
 Build-Depends: debhelper (>= 10),
  node-less,
+# opensans-*.woff building
+ woff-tools,
+ fonts-open-sans,
 Section: php
 Priority: optional
 Standards-Version: 4.1.3
@@ -10,6 +13,8 @@ Homepage: https://www.passbolt.com/
 Package: passbolt-style
 Architecture: all
 Depends: ${misc:Depends},
+# We can use Debian's
+ fonts-font-awesome,
 Replaces: passbolt-api (<< 2.0.0-rc1-16-g701a4bb3b-1~2018013000)
 Breaks: passbolt-api (<< 2.0.0-rc1-16-g701a4bb3b-1~2018013000)
 Enhances: passbolt-api

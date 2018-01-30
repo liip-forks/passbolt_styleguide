@@ -6,14 +6,31 @@
 styles := check devel login main setup
 styles_out := $(patsubst %,build/css/%.min.css,$(styles))
 styles_in := $(patsubst %,src/less/%.less,$(styles))
+fonts := opensans-bold opensans-regular
+fonts_out := $(patsubst %,build/fonts/%.woff,$(fonts))
+fonts_src := $(patsubst %,build/fonts/%.ttf,$(fonts))
 
 override_dh_clean-indep:
 	dh_clean -i
 	# These are shipped in the source archive, let's rebuild them
 	rm -f $(styles_out)
+	# Temporary font files
+	rm -f $(fonts_out) $(fonts_src)
 
-override_dh_auto_build-indep: $(styles_out)
+override_dh_auto_build-indep: $(styles_out) $(fonts_out)
 	dh_auto_build -i
 
 build/css/%.min.css: src/less/%.less
 	lessc -x $< > $@
+
+build/fonts:
+	mkdir -p $@
+
+build/fonts/opensans-bold.ttf: build/fonts
+	cp /usr/share/fonts/truetype/open-sans/OpenSans-Bold.ttf $@
+
+build/fonts/opensans-regular.ttf: build/fonts
+	cp /usr/share/fonts/truetype/open-sans/OpenSans-Regular.ttf $@
+
+build/fonts/opensans-%.woff: build/fonts/opensans-%.ttf
+	sfnt2woff $<
