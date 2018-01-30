@@ -11,6 +11,7 @@ src/img/avatar/group_default.png /usr/share/php/passbolt-api/webroot/img/avatar/
 src/img/avatar/user2.png /usr/share/php/passbolt-api/webroot/img/avatar/
 src/img/avatar/user_medium.png /usr/share/php/passbolt-api/webroot/img/avatar/
 src/img/avatar/user.png /usr/share/php/passbolt-api/webroot/img/avatar/
+src/img/controls/infinite-bar.gif /usr/share/php/passbolt-api/webroot/img/controls/
 src/img/controls/overlay-opacity-50.png /usr/share/php/passbolt-api/webroot/img/controls/
 src/img/controls/password-dots.png /usr/share/php/passbolt-api/webroot/img/controls/
 src/img/controls/tree-ctrl.png /usr/share/php/passbolt-api/webroot/img/controls/
@@ -18,6 +19,7 @@ src/img/illustrations/birds3_850.png /usr/share/php/passbolt-api/webroot/img/ill
 src/img/illustrations/birds6_850.png /usr/share/php/passbolt-api/webroot/img/illustrations/
 src/img/illustrations/nest.png /usr/share/php/passbolt-api/webroot/img/illustrations/
 src/img/logo/icon-20.png /usr/share/php/passbolt-api/webroot/img/logo/
+src/img/logo/icon-20_grey.png /usr/share/php/passbolt-api/webroot/img/logo/
 src/img/logo/icon-20_white.png /usr/share/php/passbolt-api/webroot/img/logo/
 src/img/logo/icon-48.png /usr/share/php/passbolt-api/webroot/img/logo/
 src/img/logo/icon-48_white.png /usr/share/php/passbolt-api/webroot/img/logo/
