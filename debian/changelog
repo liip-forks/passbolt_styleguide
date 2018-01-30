@@ -1,3 +1,15 @@
+passbolt-styleguide (2.0.4+repack0-1~2018013000) unstable; urgency=medium
+
+  * 2.0.4 update
+
+  * Replace jQuery minified libraries
+  * Also compile check
+  * Install the style correctly
+  * Take over all the fonts' symlinks and build from passbolt-api
+  * Install img as needed by passbolt-api 2.0.0~rc1
+
+ -- Didier Raboud (Liip) <didier.raboud@liip.ch>  Tue, 30 Jan 2018 16:34:55 +0100
+
 passbolt-styleguide (1.6.11+repack0-1~2018011000) unstable; urgency=medium
 
   * Initial test-build
