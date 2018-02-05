@@ -5369,12 +5369,14 @@ div.jfilestyle input[type=email]:disabled {
   padding: .375em .625em .375em .625em;
   font-size: 1em;
   line-height: 24px;
+  border: 1px solid #cccccc;
 }
 div.jfilestyle label {
   display: inline-block;
   border: 1px solid #cccccc;
+  border-left: 0px;
   background: #eeeeee;
-  padding: .65em 1.225em .55em 1.225em;
+  padding: .65em 1.225em .65em 1.225em;
   color: #0662ba;
   vertical-align: middle;
   line-height: normal;
@@ -5384,6 +5386,7 @@ div.jfilestyle label {
   width: auto;
   font-weight: bold;
   border-radius: 0 0.214em 0.214em 0;
+  max-height: 18px;
 }
 div.jfilestyle label[disabled] {
   pointer-events: none;
@@ -5395,16 +5398,28 @@ div.jfilestyle label:hover {
   cursor: pointer;
   opacity: 0.9;
   border: 1px solid #bbbbbb;
+  border-left: 0px;
+}
+div.jfilestyle label.primary {
+  background: #2894df;
+  border: 1px solid #2894df;
+}
+div.jfilestyle label.primary span {
+  color: #ffffff;
+}
+div.jfilestyle label.primary span:before {
+  color: #ffffff;
 }
 div.jfilestyle label span {
   color: #333333;
 }
 div.jfilestyle label span:before {
-  content: '';
+  font-family: 'FontAwesome';
+  content: "\f093";
   display: block;
   width: 1em;
   height: 1.3em;
-  background: transparent url('../img/fontawesome/upload.svg') center center no-repeat;
+  line-height: 1.3em;
   background-size: 1em 1em;
   float: left;
   color: #333333;
@@ -7281,19 +7296,24 @@ table.table-info.horizontal tbody tr:nth-child(even) {
 .edit-group-dialog .group_members.empty ul.permissions {
   display: none;
 }
+.dialog.kdbx-credentials .input-password-wrapper .input.password input,
 .dialog.import .input-password-wrapper .input.password input {
   width: 83%;
 }
+.dialog.kdbx-credentials .actions.inline,
 .dialog.import .actions.inline {
   width: 14%;
 }
+.dialog.kdbx-credentials .actions.inline .button,
 .dialog.import .actions.inline .button {
   height: 1.5em;
   padding-top: .6em;
 }
+.dialog.kdbx-credentials div.jfilestyle,
 .dialog.import div.jfilestyle {
   width: 100% !important;
 }
+.dialog.kdbx-credentials div.jfilestyle input[type=text]:disabled,
 .dialog.import div.jfilestyle input[type=text]:disabled {
   width: 60.5% !important;
 }
