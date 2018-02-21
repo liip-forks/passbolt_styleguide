@@ -1,3 +1,9 @@
+passbolt-styleguide (2.0.5+repack0-1~2018022100) unstable; urgency=medium
+
+  * Install assets through wildcards
+
+ -- Didier Raboud (Liip) <didier.raboud@liip.ch>  Wed, 21 Feb 2018 13:56:09 +0100
+
 passbolt-styleguide (2.0.5+repack0-1~2018020501) unstable; urgency=medium
 
   * Drop conflicts
