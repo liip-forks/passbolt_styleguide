@@ -1,0 +1,227 @@
+.page.services.featured.cart {
+  .error {
+    label.error {
+      font-size: 0.7em;
+      padding-top: 0;
+      margin: -4px 0 0 0;
+    }
+  }
+
+  .box {
+    border-radius: 3px;
+    border: 1px solid @border-default;
+    h2 {
+      border-bottom:1px solid @border-default;
+      padding: 0.5em 1em;
+      margin:0;
+      background: @grey-lightest;
+      text-align: left;
+      font-size: 1.1em;
+    }
+    .box-content {
+      padding: 1em;
+    }
+  }
+
+  .cart {
+    margin:1em 0 2em 0;
+
+    h1 {
+      margin-top:0;
+    }
+
+    label {
+      font-size: 1rem;
+      font-weight:normal;
+    }
+
+    .singleline {
+      .input.text {
+        float: left;
+        width: 48%;
+        &:first-child {
+          margin-right:1em;
+        }
+        input[type=text],
+        input[type=email] {
+          width:90%;
+        }
+      }
+    }
+    .input.text {
+      width: 100%;
+      input[type=text],
+      input[type=email] {
+        width:94%;
+      }
+      select {
+        width: 100%;
+      }
+    }
+    .field-vat{
+      // Chosen.js field messes up with the margin.
+      margin-top: 0.5em;
+    }
+    .input.terms {
+      margin-top:1em;
+    }
+
+    .payment_info {
+      .order-line {
+        border-bottom:1px solid @border-default;
+        padding-bottom:0.5em;
+        margin-bottom:0.5em;
+        .times {
+          color: @grey-darker;
+          font-size:0.8em;
+          padding:0 0.2em;
+        }
+        div.item-name {
+          display: inline-block;
+          margin-right: 3em;
+          font-weight:bold;
+        }
+        div.form-group.price {
+          display: inline-block;
+          width:50%;
+          margin-bottom: 0.4em;
+          label.label-quantity, input.quantity, span.times, div.price-per-user {
+            display: inline-block;
+          }
+          input.quantity {
+            width: 35px;
+            font-size:0.9em;
+          }
+          .price-per-user {
+            font-size: 0.9em;
+          }
+        }
+        .line-total {
+          float: right;
+          font-weight:bold;
+          padding-top:0.2em;
+        }
+      }
+      div.product-details {
+        color: @grey-darkest;
+        font-size: 0.9em;
+        ul li {
+          font-size:0.9em;
+          list-style: circle inside;
+        }
+        p {
+          margin-top:1em;
+          font-size: 0.8em;
+        }
+      }
+
+      .subscription-total {
+        margin: 1em 0 0 0;
+        padding-top: 1em;
+        border-top: 1px solid @border-default;
+        table.total-table {
+          width: auto;
+          margin-right: 0px;
+          margin-left: auto;
+          tr {
+            &.total {
+              border-top: 1px solid @border-default;
+              font-weight:bold;
+              td {
+                font-size: 1em;
+                color: @black;
+                font-weight:bold;
+              }
+            }
+            td {
+              &:first-child {
+                padding-right:1em;
+              }
+              &.vat {
+                padding-bottom:0.5em;
+              }
+              &.total-amount {
+                padding-top: 0.5em;
+              }
+              text-align: right;
+              font-size:0.9em;
+              color: @grey-darkest;
+            }
+          }
+        }
+        .order-total-label {
+          color: @blue;
+          font-weight:bold;
+          font-size:1.1em;
+        }
+      }
+    }
+  }
+
+  div.customer_information {
+    .chosen-search-input {
+      margin: 0;
+      padding: 0;
+      line-height: normal;
+    }
+    .chosen-search .chosen-search-input {
+      padding: 4px 20px 4px 5px;
+    }
+    .country.error {
+      label.error {
+        margin: 4px 0 0 0;
+      }
+    }
+  }
+
+  div.stripe.checkout {
+    margin: 20px auto;
+
+    .field {
+      border: 1px solid @border-input;
+      padding-left: .5em;
+    }
+
+    .field::-webkit-input-placeholder {
+      color: #CFD7E0;
+    }
+    .field::-moz-placeholder {
+      color: #CFD7E0;
+    }
+    .field:-ms-input-placeholder {
+      color: #CFD7E0;
+    }
+
+    .outcome {
+      float: left;
+      width: 100%;
+      padding-top: 8px;
+      min-height: 24px;
+      text-align: center;
+    }
+
+    .success.visible, .error.visible {
+      display: inline;
+    }
+
+    .error {
+      color: #E4584C;
+    }
+
+    .success {
+      color: #666EE8;
+    }
+
+    .success .token {
+      font-weight: 500;
+      font-size: 13px;
+    }
+
+    #js_checkout_button {
+      width: 100%;
+      text-align: center;
+      margin-top: 1em;
+      padding: 8px 0;
+    }
+  }
+}
