@@ -3,8 +3,8 @@
 %:
 	dh $@
 
-styles := check devel login main setup
-styles_out := $(patsubst %,build/css/%.min.css,$(styles))
+styles := api_login api_main api_setup
+styles_out := $(patsubst %,build/css/themes/default/%.min.css,$(styles))
 styles_in := $(patsubst %,src/less/%.less,$(styles))
 fonts := opensans-bold opensans-regular
 fonts_out := $(patsubst %,build/fonts/%.woff,$(fonts))
@@ -20,7 +20,7 @@ override_dh_clean-indep:
 override_dh_auto_build-indep: $(styles_out) $(fonts_out)
 	dh_auto_build -i
 
-build/css/%.min.css: src/less/%.less
+build/css/themes/default/%.min.css: src/less/themes/default/%.less
 	lessc -x $< > $@
 
 build/fonts:

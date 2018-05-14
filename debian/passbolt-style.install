@@ -1,8 +1,5 @@
 # Style
-build/css/devel.min.css                                  /usr/share/php/passbolt-api/webroot/css/
-build/css/login.min.css                                  /usr/share/php/passbolt-api/webroot/css/
-build/css/main.min.css                                   /usr/share/php/passbolt-api/webroot/css/
-build/css/setup.min.css                                  /usr/share/php/passbolt-api/webroot/css/
+build/css/themes/                                        /usr/share/php/passbolt-api/webroot/css/themes/
 # Fonts
 build/fonts/opensans-bold.woff                           /usr/share/php/passbolt-api/webroot/fonts/
 build/fonts/opensans-regular.woff                        /usr/share/php/passbolt-api/webroot/fonts/
