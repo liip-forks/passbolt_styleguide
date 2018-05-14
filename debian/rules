@@ -3,24 +3,28 @@
 %:
 	dh $@
 
-styles := api_login api_main api_setup
-styles_out := $(patsubst %,build/css/themes/default/%.min.css,$(styles))
-styles_in := $(patsubst %,src/less/%.less,$(styles))
+# Get the target styles
+styles_orig := $(wildcard src/less/themes/*/*.less)
+# to individual dir+non-extension names
+styles := $(patsubst src/less/themes/%.less,%,$(styles_orig))
+# end-result files
+styles_out := $(patsubst %,build/css/themes/%.min.css,$(styles))
+
 fonts := opensans-bold opensans-regular
 fonts_out := $(patsubst %,build/fonts/%.woff,$(fonts))
 fonts_src := $(patsubst %,build/fonts/%.ttf,$(fonts))
 
 override_dh_clean-indep:
 	dh_clean -i
-	# These are shipped in the source archive, let's rebuild them
-	rm -f $(styles_out)
+	# Make sure to only ship what we've rebuilt
+	find build/css/ -type f -delete
 	# Temporary font files
 	rm -f $(fonts_out) $(fonts_src)
 
 override_dh_auto_build-indep: $(styles_out) $(fonts_out)
 	dh_auto_build -i
 
-build/css/themes/default/%.min.css: src/less/themes/default/%.less
+build/css/%.min.css: src/less/%.less
 	lessc -x $< > $@
 
 build/fonts:
