@@ -1,5 +1,5 @@
 # Style
-build/css/themes/                                        /usr/share/php/passbolt-api/webroot/css/themes/
+build/css/themes/*                                       /usr/share/php/passbolt-api/webroot/css/themes/
 # Fonts
 build/fonts/opensans-bold.woff                           /usr/share/php/passbolt-api/webroot/fonts/
 build/fonts/opensans-regular.woff                        /usr/share/php/passbolt-api/webroot/fonts/
