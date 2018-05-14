@@ -15,6 +15,7 @@ Architecture: all
 Depends: ${misc:Depends},
 # We can use Debian's
  fonts-font-awesome,
+Breaks: passbolt-api (<< 2.0.8)
 Enhances: passbolt-api
 Description: Passbolt API - Password Manager for teams - Style
  It allows you to securely share and store credentials. For instance, the wifi
