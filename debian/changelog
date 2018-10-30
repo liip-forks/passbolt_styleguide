@@ -1,3 +1,9 @@
+passbolt-styleguide (2.4.5+repack0-1~2018103001) unstable; urgency=medium
+
+  * Fix styles build
+
+ -- Didier Raboud (Liip) <didier.raboud@liip.ch>  Tue, 30 Oct 2018 15:25:12 +0100
+
 passbolt-styleguide (2.4.5+repack0-1~2018103000) unstable; urgency=medium
 
   * 2.4.5 update
