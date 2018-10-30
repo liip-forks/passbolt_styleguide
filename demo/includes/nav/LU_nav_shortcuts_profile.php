@@ -14,7 +14,7 @@
 			<div class="row">
 				<div class="main-cell-wrapper">
 					<div class="main-cell">
-						<a href="../demo/LU_users_profile.php"><span>Profile</span></a>
+						<a href="demo/LU_users_profile.php"><span>Profile</span></a>
 					</div>
 				</div>
 			</div>
@@ -23,16 +23,26 @@
 			<div class="row">
 				<div class="main-cell-wrapper">
 					<div class="main-cell">
-						<a href="../demo/LU_users_profile_loginhistory.php"><span>Login history</span></a>
+						<a href="demo/LU_users_profile_loginhistory.php"><span>Login history</span></a>
 					</div>
 				</div>
 			</div>
 		</li>
-        <li class="<?php echo isselected('themese'); ?>">
+        <li class="<?php echo isselected('themes'); ?>">
             <div class="row">
                 <div class="main-cell-wrapper">
                     <div class="main-cell">
-                        <a href="../demo/LU_users_profile_themes.php"><span>Theme</span></a>
+                        <a href="demo/LU_users_profile_themes.php"><span>Theme</span></a>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="<?php echo isselected('mfa'); ?>">
+            <div class="row">
+                <div class="main-cell-wrapper">
+                    <div class="main-cell">
+                        <a href="demo/LU_users_profile_mfa.php"><span>Authentication</span></a>
                     </div>
                 </div>
             </div>
@@ -41,16 +51,18 @@
 			<div class="row">
 				<div class="main-cell-wrapper">
 					<div class="main-cell">
-						<a href="../demo/LU_users_profile_notifications.php"><span>Notification settings</span></a>
+						<a href="demo/LU_users_profile_notifications.php"><span>Email notifications</span></a>
 					</div>
 				</div>
 			</div>
 		</li>
+
+        <!--
         <li class="<?php echo isselected('keyinspector'); ?>">
             <div class="row">
                 <div class="main-cell-wrapper">
                     <div class="main-cell">
-                        <a href="../demo/LU_users_profile_keyinspector.php"><span>Keys inspector</span></a>
+                        <a href="demo/LU_users_profile_keyinspector.php"><span>Keys inspector</span></a>
                     </div>
                 </div>
             </div>
@@ -59,7 +71,7 @@
             <div class="row">
                 <div class="main-cell-wrapper">
                     <div class="main-cell">
-                        <a href="../demo/LU_users_profile_keyinspector_identities.php"><span>Identities</span></a>
+                        <a href="demo/LU_users_profile_keyinspector_identities.php"><span>Identities</span></a>
                     </div>
                 </div>
             </div>
@@ -68,10 +80,10 @@
             <div class="row">
                 <div class="main-cell-wrapper">
                     <div class="main-cell">
-                        <a href="../demo/LU_users_profile_keyinspector_subkeys.php"><span>Subkeys</span></a>
+                        <a href="demo/LU_users_profile_keyinspector_subkeys.php"><span>Subkeys</span></a>
                     </div>
                 </div>
             </div>
-        </li>
+        </li>-->
 	</ul>
 </div>

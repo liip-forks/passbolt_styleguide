@@ -682,6 +682,7 @@ html body .hidden {
     opacity: 0.0;
   }
 }
+/* box shadows */
 /* body */
 body {
   color: #333;
@@ -3105,11 +3106,11 @@ p {
 /* input label */
 label {
   font-weight: bold;
-  font-size: 1.125em;
-  /* 18px */
+  font-size: 1em;
+  /* 16px */
   line-height: 1.333333em;
   /* 24px */
-  padding: .25em 0;
+  padding: .5em 0;
   display: block;
 }
 /*
@@ -3149,6 +3150,7 @@ input[type=text],
 input[type=email],
 input[type=password],
 input[type=search],
+input[type=number],
 textarea {
   font-size: 16px;
   line-height: 24px;
@@ -3163,15 +3165,13 @@ textarea {
   border: 1px solid #CCC;
   border-top: 1px solid #BBB;
   vertical-align: middle;
-  -ms-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 textarea:hover,
 input[type=password]:hover,
 input[type=search]:hover,
 input[type=text]:hover,
+input[type=number]:hover,
 input[type=email]:hover {
   border: 1px solid #BBB;
 }
@@ -3179,21 +3179,18 @@ textarea:focus,
 input[type=password]:focus,
 input[type=search]:focus,
 input[type=text]:focus,
-input[type=email]:focus {
-  -webkit-box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.2);
-  -moz-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+input[type=number]:focus input[type=email]:focus {
   box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
   border: 1px solid #2894DF;
 }
 .input-focus {
-  -webkit-box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.2);
-  -moz-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
   border: 1px solid #2894DF;
 }
 input[type=password]:disabled,
 input[type=search]:disabled,
 input[type=text]:disabled,
+input[type=number]:disabled,
 input[type=email]:disabled {
   border: 1px solid #DDD;
   -webkit-box-shadow: 0 0 0 0;
@@ -3258,11 +3255,73 @@ input[type=checkbox] + label {
   font-weight: normal;
   display: inline;
   margin-left: .25em;
-}
-.input.checkbox {
-  padding-top: .5em;
+  margin-bottom: .25em;
 }
 /* radio and checkboxes */
+.radiolist {
+  /*
+     * For IE 6/7 only
+     * Include this rule to trigger hasLayout and contain floats.
+     */
+  /*
+     * Clearfix: contain floats
+     *
+     * For modern browsers
+     * 1. The space content is one way to avoid an Opera bug when the
+     *	`contenteditable` attribute is included anywhere else in the document.
+     *	Otherwise it causes space to appear at the top and bottom of elements
+     *	that receive the `clearfix` class.
+     * 2. The use of `table` rather than `block` is only necessary if using
+     *	`:before` to contain the top-margins of child elements.
+     */
+  /*
+     * For IE 6/7 only
+     * Include this rule to trigger hasLayout and contain floats.
+     */
+  zoom: 1;
+  /*
+     * Clearfix: contain floats
+     *
+     * For modern browsers
+     * 1. The space content is one way to avoid an Opera bug when the
+     *	`contenteditable` attribute is included anywhere else in the document.
+     *	Otherwise it causes space to appear at the top and bottom of elements
+     *	that receive the `clearfix` class.
+     * 2. The use of `table` rather than `block` is only necessary if using
+     *	`:before` to contain the top-margins of child elements.
+     */
+}
+.radiolist:before,
+.radiolist:after {
+  content: "";
+  display: table;
+}
+.radiolist:after {
+  clear: both;
+}
+.radiolist:before,
+.radiolist:after {
+  content: "";
+  display: table;
+}
+.radiolist:after {
+  clear: both;
+}
+.radiolist .input.radio {
+  float: left;
+}
+.radiolist .input.radio input {
+  float: left;
+  margin-top: .55em;
+}
+.radiolist .input.radio input + label {
+  font-weight: normal;
+  display: inline-block;
+  margin-left: .65em;
+  font-size: 1em;
+  float: left;
+  margin-right: 2em;
+}
 /*
 	Messages for validation error and example
 
@@ -3321,10 +3380,74 @@ input[type=text].fluid,
 input[type=email].fluid {
   width: 80%;
 }
+.submit-input-wrapper,
 .submit-wrapper {
   margin-top: .5em;
 }
 /* shortcut classes for layout */
+.singleline {
+  /*
+     * For IE 6/7 only
+     * Include this rule to trigger hasLayout and contain floats.
+     */
+  /*
+     * Clearfix: contain floats
+     *
+     * For modern browsers
+     * 1. The space content is one way to avoid an Opera bug when the
+     *	`contenteditable` attribute is included anywhere else in the document.
+     *	Otherwise it causes space to appear at the top and bottom of elements
+     *	that receive the `clearfix` class.
+     * 2. The use of `table` rather than `block` is only necessary if using
+     *	`:before` to contain the top-margins of child elements.
+     */
+  /*
+     * For IE 6/7 only
+     * Include this rule to trigger hasLayout and contain floats.
+     */
+  zoom: 1;
+  /*
+     * Clearfix: contain floats
+     *
+     * For modern browsers
+     * 1. The space content is one way to avoid an Opera bug when the
+     *	`contenteditable` attribute is included anywhere else in the document.
+     *	Otherwise it causes space to appear at the top and bottom of elements
+     *	that receive the `clearfix` class.
+     * 2. The use of `table` rather than `block` is only necessary if using
+     *	`:before` to contain the top-margins of child elements.
+     */
+}
+.singleline:before,
+.singleline:after {
+  content: "";
+  display: table;
+}
+.singleline:after {
+  clear: both;
+}
+.singleline:before,
+.singleline:after {
+  content: "";
+  display: table;
+}
+.singleline:after {
+  clear: both;
+}
+.singleline .input.text {
+  float: left;
+  width: 40.2%;
+}
+.singleline .input.text:first-child,
+.singleline .input.text.first-field {
+  margin-right: 2.5%;
+}
+.singleline .input.text input[type="text"],
+.singleline .input.text input[type="email"],
+.singleline .input.text input[type="password"],
+.singleline .input.text input[type="search"] {
+  width: 93%;
+}
 /*
 	Generic buttons
 	Description	: We support <input[submit]>, <input.button>, <button> and <a.button>
@@ -3371,33 +3494,23 @@ button,
   display: inline-block;
   /* in case there is a div wrapper */
 }
-input.button.big {
+.button.big {
   font-size: 1.125em;
 }
-a.button.big {
-  font-size: 1em;
-  height: 1.5em;
-  margin-top: 1em;
-  min-width: 3em;
-}
 /* primary */
-.button.primary,
-button.primary {
+.button.primary {
   background: #2894DF;
   border: 1px solid #2894DF;
   color: #FFF;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
-.button.primary:hover,
-button.primary:hover {
+.button.primary:hover {
   background: #2A9CEB;
   border: 1px solid #2A9CEB;
   color: #FFF;
 }
-button.primary:active,
 .button.primary:active,
-.button.primary:focus,
-button.primary:focus {
+.button.primary:focus {
   color: #FFF;
   border: 1px solid #4271b7;
   background: #2A9CEB;
@@ -3429,9 +3542,7 @@ button.primary:focus {
   font-weight: normal;
 }
 /* hover */
-input[type=submit]:hover,
-.button:hover,
-button:hover {
+.button:hover {
   color: #333;
   text-decoration: none;
   background: #F3F3F3;
@@ -3444,26 +3555,18 @@ button:hover {
   border: 1px solid #BBB;
 }
 /* focus */
-input[type=submit]:focus,
-.button:focus,
-button:focus {
+.button:focus {
   color: #2894DF;
   border: 1px solid #2894DF;
 }
 /* active */
-input[type=submit]:active,
-button:active,
 .button:active {
   color: #2894DF;
   border: 1px solid #2894DF;
   background: #EEE;
   position: relative;
-  -webkit-box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-input[type=submit].disabled,
-button.disabled,
 .button.disabled {
   cursor: default;
   color: #888;
@@ -3473,17 +3576,9 @@ button.disabled,
   font-weight: normal;
 }
 /* inactive */
-input[type=submit].disabled:hover,
 .button.disabled:hover,
-button.disabled:hover,
-input[type=submit].disabled:active,
-button.disabled:active,
 .button.disabled:active,
-input[type=submit].disabled:focus,
-button.disabled:focus,
 .button.disabled:focus {
-  -webkit-box-shadow: 0 0 0;
-  -moz-box-shadow: 0 0 0;
   box-shadow: 0 0 0;
   top: 0;
   color: #888;
@@ -3493,8 +3588,6 @@ button.disabled:focus,
 /* toggle selected */
 .toggle.button.selected {
   background: #EEE;
-  -webkit-box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
   border: 1px solid #BBB;
 }
@@ -3553,20 +3646,12 @@ button.disabled:focus,
 }
 .button.duo:nth-child(1) {
   margin-right: 0;
-  -webkit-border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 0;
-  -moz-border-radius-topright: 0;
-  -moz-border-radius-bottomright: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 .button.duo:nth-child(2) {
   margin-left: 0;
   border-left: 0;
-  -webkit-border-top-left-radius: 0;
-  -webkit-border-bottom-left-radius: 0;
-  -moz-border-radius-topleft: 0;
-  -moz-border-radius-bottomleft: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -3587,7 +3672,6 @@ html body .button.processing {
   background-size: auto 50% ;
   border: 1px solid #DDD;
   border-radius: 5px;
-  padding: 1px;
 }
 .button-spacer {
   margin-right: .5em;
@@ -4173,6 +4257,15 @@ html body .button.processing {
   -o-text-overflow: ellipsis;
   -ms-text-overflow: ellipsis;
 }
+.dialog .dialog-header .tooltip-alt {
+  margin-left: 0.3em;
+  font-size: 0.7em;
+  font-weight: normal;
+  color: #333;
+}
+.dialog .dialog-header .tooltip-alt .tooltip-text {
+  white-space: normal;
+}
 .dialog .dialog-header .dialog-header-subtitle {
   padding-top: 0.3em;
   padding-left: 1em;
@@ -4426,14 +4519,69 @@ html body .button.processing {
   background: #FEF0BF;
 }
 /* big side info message blocks on setup or profile pages */
-.side-message {
+.message.side-message {
   margin-left: 1em;
   font-size: 1em;
   margin-right: 2em;
 }
-.side-message ul,
-.side-message p {
+.message.side-message ul,
+.message.side-message p {
   padding-bottom: 1em;
+}
+/* success animation */
+.message.success.success-large.animated {
+  background: #FFF;
+  color: #333;
+  display: flex;
+  border: 1px solid #DDD;
+  border-radius: 3px;
+}
+.message.success.success-large.animated .illustration {
+  flex: 0 0 180px;
+}
+.message.success.success-large.animated .additional-information {
+  flex: 1;
+  line-height: 180px;
+  margin-top: 1.5em;
+  padding-left: 1em;
+}
+@keyframes drawCircle {
+  0% {
+    stroke-dashoffset: 180px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes drawCheck {
+  0% {
+    stroke-dashoffset: 50px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.message.success.success-large.animated #successAnimationCircle {
+  stroke-dasharray: 180px 180px;
+  stroke: #009900;
+}
+.message.success.success-large.animated #successAnimationCheck {
+  stroke-dasharray: 50px 50px;
+  stroke: #009900;
+}
+.message.success.success-large.animated #successAnimation.animated {
+  animation: 0.75s ease-out 0s 1 both pop;
+}
+.message.success.success-large.animated #successAnimation.animated #successAnimationCircle {
+  animation: 0.75s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle;
+}
+.message.success.success-large.animated #successAnimation.animated #successAnimationCheck {
+  animation: 0.75s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck;
+}
+@media only screen and (max-width: 767px) {
+  .message.success.success-large.animated {
+    flex-direction: column;
+  }
 }
 .plugin-check {
   padding: 1em;

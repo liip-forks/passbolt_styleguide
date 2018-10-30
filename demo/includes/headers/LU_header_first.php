@@ -1,4 +1,8 @@
-<!-- top navigation -->
+<?php
+if (!isset($role)) {
+	$role='user';
+}
+?><!-- top navigation -->
 <div class="header first">
 <script type="application/javascript">
 	$(function() {
@@ -19,7 +23,7 @@
 					<div class="row selected">
 						<div class="main-cell-wrapper">
 							<div class="main-cell">
-								<a href="../demo/LU_passwords.php" role="button" tabindex="2"><span>passwords</span></a>
+								<a href="demo/LU_passwords.php" role="button" tabindex="2"><span>passwords</span></a>
 							</div>
 						</div>
 					</div>
@@ -28,11 +32,22 @@
 					<div class="row">
 						<div class="main-cell-wrapper">
 							<div class="main-cell">
-								<a href="../demo/LU_users.php" role="button" tabindex="3"><span>users</span></a>
+								<a href="demo/LU_users.php" role="button" tabindex="3"><span>users</span></a>
 							</div>
 						</div>
 					</div>
 				</li>
+				<?php  if ($role == 'admin'): ?>
+				<li id="067a31db-232c-32a0-8a6d-56c3bfdf83b0" class="administration ready">
+					<div class="row">
+						<div class="main-cell-wrapper">
+							<div class="main-cell">
+								<a href="demo/AD_admin_ldap_configuration.php" role="button" tabindex="3"><span>administration</span></a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<?php endif; ?>
 				<li id="067a31de-232c-32a0-8a6d-56c3bfdf83b0" class="users ready">
 					<div class="row">
 						<div class="main-cell-wrapper">
@@ -49,7 +64,7 @@
 					<div class="row">
 						<div class="main-cell-wrapper">
 							<div class="main-cell">
-								<a href="../demo/AN_login.php"><span>logout</span></a>
+								<a href="demo/AN_login.php"><span>logout</span></a>
 							</div>
 						</div>
 					</div>
