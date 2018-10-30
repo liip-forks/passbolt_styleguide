@@ -34,20 +34,12 @@ button,
     display: inline-block; /* in case there is a div wrapper */
 }
 
-input.button.big {
+.button.big {
     font-size: 1.125em;
 }
 
-a.button.big {
-    font-size: 1em;
-    height: 1.5em;
-    margin-top: 1em;
-    min-width: 3em;
-}
-
 /* primary */
-.button.primary,
-button.primary {
+.button.primary {
     background: @button-primary-background;
     border: 1px solid @button-primary-border;
     color: @button-primary-color;
@@ -55,17 +47,14 @@ button.primary {
 }
 
 
-.button.primary:hover,
-button.primary:hover {
+.button.primary:hover {
     background: @button-primary-hover-background;
     border: 1px solid @button-primary-hover-border;
     color: @button-primary-hover-color;
 }
 
-button.primary:active,
 .button.primary:active,
-.button.primary:focus,
-button.primary:focus {
+.button.primary:focus {
     color: @font-inverse;
     border: 1px solid @border-focus-dark;
     background: @blue-light;
@@ -101,9 +90,7 @@ button.primary:focus {
 }
 
 /* hover */
-input[type=submit]:hover,
-.button:hover,
-button:hover {
+.button:hover {
     color: @font-default;
     text-decoration: none;
     .button-hover-background();
@@ -111,28 +98,20 @@ button:hover {
 }
 
 /* focus */
-input[type=submit]:focus,
-.button:focus,
-button:focus {
+.button:focus {
     color: @font-focus;
     border: 1px solid @border-focus;
 }
 
 /* active */
-input[type=submit]:active,
-button:active,
 .button:active {
     color: @font-focus;
     border: 1px solid @border-focus;
     background: @background-lighter;
     position: relative;
-    -webkit-box-shadow: inset 0 1px 2px rgba(255, 255, 255, .2);
-    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
 }
 
-input[type=submit].disabled,
-button.disabled,
 .button.disabled {
     cursor: default;
     color: @button-disabled-color;
@@ -143,17 +122,9 @@ button.disabled,
 }
 
 /* inactive */
-input[type=submit].disabled:hover,
 .button.disabled:hover,
-button.disabled:hover,
-input[type=submit].disabled:active,
-button.disabled:active,
 .button.disabled:active,
-input[type=submit].disabled:focus,
-button.disabled:focus,
 .button.disabled:focus {
-    -webkit-box-shadow: 0 0 0;
-    -moz-box-shadow: 0 0 0;
     box-shadow: 0 0 0;
     top: 0;
     color: @button-disabled-color;
@@ -164,8 +135,6 @@ button.disabled:focus,
 /* toggle selected */
 .toggle.button.selected {
     background: @button-selected-background;
-    -webkit-box-shadow: inset 0 1px 2px rgba(255, 255, 255, .2);
-    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
     border: 1px solid @button-selected-border;
 }
@@ -180,10 +149,6 @@ button.disabled:focus,
 
 .button.duo:nth-child(1) {
     margin-right: 0;
-    -webkit-border-top-right-radius: 0;
-    -webkit-border-bottom-right-radius: 0;
-    -moz-border-radius-topright: 0;
-    -moz-border-radius-bottomright: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
@@ -191,10 +156,6 @@ button.disabled:focus,
 .button.duo:nth-child(2) {
     margin-left: 0;
     border-left: 0;
-    -webkit-border-top-left-radius: 0;
-    -webkit-border-bottom-left-radius: 0;
-    -moz-border-radius-topleft: 0;
-    -moz-border-radius-bottomleft: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
@@ -217,9 +178,7 @@ html body .button.processing {
     background-size: auto 50% ;
     border: 1px solid @border-default;
     border-radius: 5px;
-    padding: 1px;
 }
-
 .button-spacer {
     margin-right: .5em;
 }
