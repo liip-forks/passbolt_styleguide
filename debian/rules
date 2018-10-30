@@ -4,11 +4,14 @@
 	dh $@
 
 # Get the target styles
-styles_orig := $(wildcard src/less/themes/*/*.less)
+styles_orig := $(wildcard src/less/themes/anew/*.less)
+styles_orig += $(wildcard src/less/themes/default/*.less)
+styles_orig += $(wildcard src/less/themes/midgar/*.less)
+styles_orig += $(wildcard src/less/*.less)
 # to individual dir+non-extension names
-styles := $(patsubst src/less/themes/%.less,%,$(styles_orig))
+styles := $(patsubst src/less/%.less,%,$(styles_orig))
 # end-result files
-styles_out := $(patsubst %,build/css/themes/%.min.css,$(styles))
+styles_out := $(patsubst %,build/css/%.min.css,$(styles))
 
 fonts := opensans-bold opensans-regular
 fonts_out := $(patsubst %,build/fonts/%.woff,$(fonts))
@@ -25,6 +28,7 @@ override_dh_auto_build-indep: $(styles_out) $(fonts_out)
 	dh_auto_build -i
 
 build/css/%.min.css: src/less/%.less
+	mkdir -p `dirname $@`
 	lessc -x $< > $@
 
 build/fonts:
