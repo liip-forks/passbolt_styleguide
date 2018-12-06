@@ -6,6 +6,7 @@ build/fonts/opensans-regular.woff                        /usr/share/php/passbolt
 # Img
 src/img/avatar/*                                         /usr/share/php/passbolt-api/webroot/img/avatar/
 src/img/controls/*                                       /usr/share/php/passbolt-api/webroot/img/controls/
+src/img/diagrams/*                                       /usr/share/php/passbolt-api/webroot/img/diagrams/
 src/img/illustrations/*                                  /usr/share/php/passbolt-api/webroot/img/illustrations/
 src/img/logo/*                                           /usr/share/php/passbolt-api/webroot/img/logo/
 src/img/third_party/*                                    /usr/share/php/passbolt-api/webroot/img/third_party/
