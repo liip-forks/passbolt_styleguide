@@ -1,3 +1,9 @@
+passbolt-styleguide (2.4.8+repack0-1~2019012100) unstable; urgency=medium
+
+  * 2.4.8 update
+
+ -- Didier Raboud (Liip) <didier.raboud@liip.ch>  Mon, 21 Jan 2019 11:35:18 +0100
+
 passbolt-styleguide (2.4.7+repack0-1~2018120601) unstable; urgency=medium
 
   * Install missing diagrams
