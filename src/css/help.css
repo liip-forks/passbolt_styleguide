@@ -4416,6 +4416,7 @@ article video {
 }
 article table.table-parameters {
   width: 100%;
+  margin-bottom: 1em;
 }
 article table.table-parameters thead {
   background-color: transparent !important;
@@ -5147,6 +5148,9 @@ article table.table-parameters tbody tr td em {
   color: #333;
   background: #FEF0BF;
 }
+.message p:last-child {
+  margin-bottom: 0;
+}
 /* big side info message blocks on setup or profile pages */
 .message.side-message {
   margin-left: 1em;
@@ -5546,6 +5550,7 @@ article figure img {
 article figure .legend {
   display: inline-block;
   margin-top: 0.5em;
+  margin-bottom: 1em;
   font-style: italic;
 }
 /* lightbox */
@@ -5589,7 +5594,7 @@ article figure .legend {
 }
 .tldr {
   background: #F3F3F3;
-  padding: 1em;
+  padding: 1.5em 1em;
 }
 .tldr i {
   margin-right: 1em;
@@ -5604,22 +5609,14 @@ article figure .legend {
 .tldr.alt .illustration {
   margin-top: 2em;
 }
-.tldr .madeinindia {
-  margin-top: 2em;
-}
-.tldr .madeinindia i {
-  color: #D40101;
-  margin-right: 0;
-}
 .tldr h4 {
   margin-top: 0.5em;
 }
-.tldr h4.visuallyhidden + p,
-.tldr p {
-  margin-top: 0.75em;
-}
 .tldr h4 + p {
   margin-top: 0;
+}
+.tldr p:last-child {
+  margin-bottom: 0;
 }
 /* reset layout styles on smaller screen */
 @media all and (min-width: 1024px) {
